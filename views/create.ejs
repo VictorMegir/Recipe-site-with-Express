@@ -1,0 +1,41 @@
+<%- include ('./partials/head.ejs') %>
+<body>
+    <%- include ('./partials/nav.ejs') %>
+    <div class='creating'>
+        <form action="/recipes/create" method="POST" enctype="multipart/form-data">
+            <label for="image">Image: </label> 
+            <input type="file" class='image-selection' id='image-id' name="image-file" onchange="changeStyle()" accept="image/*">
+            <br><br>
+            <img id='image-display' src=''>
+            <br>
+            <label>Name: </label>
+            <input type='text' class='text-like name' name='Name' placeholder="Name" required>
+            <br><br>
+            <label>Ingredients: </label><br>
+            <input type='button' class='button-like add-ingredient-button' id='add-ingredient' onclick='addIngredient()' value='Add Ingredient'>
+            <ul id='list'>
+                <li id = 'ingredient-starting'>
+                    <input name="Ingredients" class='text-like ingredient' placeholder="New Ingredient" required>
+                    <input type="button" class='button-like X-button' onclick="deleteIngredient('ingredient-starting')" value="X">
+                </li>
+            </ul>
+            <label>Instructions: </label>
+            <br>
+            <textarea name='Instructions' placeholder="Instructions..." required></textarea>
+            <br><br>
+            <label>Difficulty: </label>
+            <input type='number' class='text-like' name='Difficulty' value='0' min='0' max='5' step="0.5">
+            <br><br>
+            <label>Credit: </label>
+            <input type='text' class='text-like' name='Credit' value="Original Recipe">
+            <br><br>
+            <input type='submit' class='button-like create' value="Create" onclick="validateIngredients()"/>
+        </form>
+        <form action="/recipes" id='cancel' method="GET">
+            <input type='submit' class='button-like cancel' value="Cancel">
+        </form>
+    </div>
+</body>
+<%- include ('./partials/footer.ejs') %>
+<%- include ('./partials/editIngredients.ejs') %>
+<%- include ('./partials/previewImage.ejs') %>

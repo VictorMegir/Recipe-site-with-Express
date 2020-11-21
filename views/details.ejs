@@ -1,0 +1,32 @@
+<%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <div class='details'>
+        <h2 class='name'><%= recipe.Name %></h2>
+        <img src="<%= recipe.ImageName %>">
+        <div class='recipe-info'>
+            <h3>Ingredients</h3>
+            <ul class='ingredients'>
+            <% recipe.Ingredients.forEach(ingredient => { %>
+                <li><%= ingredient %></li>
+            <% }) %>
+            </ul>
+            <h3>Instructions</h3>
+            <div class='instructions'>
+                <p><%= recipe.Instructions %></p>
+            </div>
+            <h3 class='difficulty'>Difficulty: <%= recipe.Difficulty %></h3>
+            <p>Credits: <%= recipe.Credit %></p>
+            <div class='dates'>
+                <p>Created at: <%= recipe.createdAt.toDateString() %></p>
+                <p>Last edit at: <%= recipe.updatedAt.toDateString() %></p>
+            </div>
+        </div>
+        <form>
+            <input type='submit' formaction="/recipes/edit/<%= recipe._id %>" formmethod="GET" value='Edit'>
+            <input type='submit' formaction='/recipes/delete/<%= recipe._id %>' formmethod="POST" value='Delete'>
+            <input type='submit' formaction="/recipes" formmethod="GET" value="Cancel">
+        </form>
+    </div>
+</body>
+<%- include('./partials/footer.ejs') %>

@@ -1,0 +1,54 @@
+<%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <div class='editing'>
+        <h2>Edit Recipe: <%= recipe.Name %></h2>
+        <form action="/recipes/edit/<%= recipe._id %>" method="POST" enctype="multipart/form-data">
+            <img class='image-style' id='image-display' src="<%= recipe.ImageName %>">
+            <br><br>
+            <label for="image">Image: </label> 
+            <input type="file" class='image-selection' id="image-id" name="image-file" oninput="changedValue()" onchange="changeDisplayedImage()" value="" accept="image/*">
+            <br><br>
+            <label>Name: </label>
+            <input type='text' class='text-like name' name='Name' oninput="changedValue()" value="<%= recipe.Name %>"/>
+            <br><br>
+            <label>Ingredients: </label>
+            <br>
+            <input type='button' class='button-like add-ingredient-button' id='add-ingredient' onclick='addIngredient();changedValue()' value='Add Ingredient'>
+            <ul id="list">
+                <% recipe.Ingredients.forEach((ingredient, index) => { %>
+                    <li id='ingredient-<%= index %>'>
+                        <input type='text' class='text-like ingredient' name='Ingredients' oninput="changedValue()" value="<%= ingredient %>">
+                        <input type='button' class='button-like X-button' onclick="deleteIngredient('ingredient-<%= index %>');changedValue()" value="X">
+                    </li>
+                <% }) %>
+            </ul>
+            <label>Instructions: </label>
+            <textarea name='Instructions' oninput="changedValue()"><%= recipe.Instructions %></textarea>
+            <br><br>
+            <label>Difficulty: </label>
+            <input type='number' class='text-like' name='Difficulty' value='<%= recipe.Difficulty %>' min='0' max='5' step="0.5" oninput="changedValue()">
+            <br><br>
+            <label>Credit: </label>
+            <input type='text' class='text-like' name='Credit' value="<%= recipe.Credit %>" oninput="changedValue()">
+            <br><br>
+            <input type='submit' class='button-like edit' id='edit-button' onclick="validateIngredients()" value="Edit" disabled>
+        </form>
+        <form action="/recipes" id='cancel' method="GET">
+            <input type='submit' class='button-like cancel' value="Cancel">
+        </form>
+    </div>
+</body>
+<%- include('./partials/footer.ejs') %>
+<%- include('./partials/editIngredients.ejs') %>
+<%- include ('./partials/previewImage.ejs') %>
+
+<script>
+    function changedValue() {
+        document.getElementById('edit-button').disabled = false;
+    }
+
+    function changeDisplayedImage() {
+        document.getElementById('displayed-image').src = document.getElementById('image').value;
+    }
+</script>

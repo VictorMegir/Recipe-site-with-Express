@@ -1,0 +1,32 @@
+<%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <h2 class='all-recipes'>All Recipes</h2>
+    <% if (recipes.length > 0) { %>
+        <% recipes.forEach(recipe => { %>
+            <div class='recipe'>
+                <a href='/recipes/<%= recipe._id %>'>
+                    <h3><%= recipe.Name %></h3>
+                    <img src="<%= recipe.ImageName %>">
+                </a>
+                <div class='under-image'>
+                    <h3>Difficulty: <%= recipe.Difficulty %></h3>
+                    <form action="/recipes/edit/<%= recipe._id %>" method="GET">
+                        <input type='submit' value='Edit'>
+                    </form>
+                    <form action='/recipes/delete/<%= recipe._id %>' method="POST">
+                        <input type='submit' value='Delete'>
+                    </form>
+                </div>
+            </div>
+        <% }) %>
+    <% } else { %> 
+    <div class='no-recipes'>
+        <h3>No recipes to dispaly</h3>
+        <div class='create-link'>
+            <a href='/recipes/create'>Create a Recipe</a>
+        </div>
+    </div>
+    <% } %> 
+</body>
+<%- include('./partials/footer.ejs') %>

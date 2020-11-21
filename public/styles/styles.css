@@ -1,0 +1,566 @@
+body {
+  background-size: cover;
+  font-family: "Satisfy", cursive;
+  max-width: 100em;
+  margin: 8px;
+}
+
+body a {
+  text-decoration: none;
+  color: #750101;
+}
+
+.background-image {
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+footer {
+  text-align: center;
+}
+
+body {
+  background-size: cover;
+  font-family: "Satisfy", cursive;
+  max-width: 100em;
+  margin: 8px;
+}
+
+body a {
+  text-decoration: none;
+  color: #750101;
+}
+
+.background-image {
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+footer {
+  text-align: center;
+}
+
+.creating {
+  overflow: visible;
+  width: 85%;
+  position: relative;
+  left: 7%;
+}
+
+.creating .image-style {
+  width: 100%;
+  height: 30%;
+  left: 8%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.creating label {
+  font-size: 28px;
+}
+
+.creating .button-like {
+  border: 2px solid black;
+  border-radius: 10%;
+  background-color: #c07c66;
+  font-family: 'Satisfy', cursive;
+  font-size: 18px;
+}
+
+.creating .add-ingredient-button {
+  position: relative;
+  left: 40px;
+}
+
+.creating .X-button {
+  position: relative;
+  bottom: 5px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.creating textarea {
+  font-family: 'Satisfy', cursive;
+  font-size: 18px;
+  width: 100%;
+  height: 20%;
+}
+
+.creating .text-like {
+  font-family: 'Satisfy', cursive;
+  font-size: 18px;
+  height: 30px;
+  position: relative;
+  bottom: 5px;
+}
+
+.creating .name {
+  width: 45%;
+}
+
+.creating .ingredient {
+  width: 80%;
+}
+
+.creating .cancel {
+  position: relative;
+  left: 55%;
+  bottom: 48px;
+  margin-left: 5px;
+}
+
+.creating .image-selection {
+  font-family: 'Satisfy', cursive;
+  font-size: 16px;
+}
+
+.creating .create {
+  position: relative;
+  left: 25%;
+  margin-right: 5px;
+}
+
+.editing {
+  overflow: visible;
+  width: 85%;
+  position: relative;
+  left: 7%;
+}
+
+.editing .image-style {
+  width: 100%;
+  height: 30%;
+  left: 8%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.editing label {
+  font-size: 28px;
+}
+
+.editing .button-like {
+  border: 2px solid black;
+  border-radius: 10%;
+  background-color: #c07c66;
+  font-family: 'Satisfy', cursive;
+  font-size: 18px;
+}
+
+.editing .add-ingredient-button {
+  position: relative;
+  left: 40px;
+}
+
+.editing .X-button {
+  position: relative;
+  bottom: 5px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.editing textarea {
+  font-family: 'Satisfy', cursive;
+  font-size: 18px;
+  width: 100%;
+  height: 20%;
+}
+
+.editing .text-like {
+  font-family: 'Satisfy', cursive;
+  font-size: 18px;
+  height: 30px;
+  position: relative;
+  bottom: 5px;
+}
+
+.editing .name {
+  width: 45%;
+}
+
+.editing .ingredient {
+  width: 80%;
+}
+
+.editing .cancel {
+  position: relative;
+  left: 55%;
+  bottom: 48px;
+  margin-left: 5px;
+}
+
+.editing .image-selection {
+  font-family: 'Satisfy', cursive;
+  font-size: 16px;
+}
+
+.editing h2 {
+  text-align: center;
+}
+
+.editing .edit {
+  position: relative;
+  left: 25%;
+  margin-right: 5px;
+}
+
+body {
+  background-size: cover;
+  font-family: "Satisfy", cursive;
+  max-width: 100em;
+  margin: 8px;
+}
+
+body a {
+  text-decoration: none;
+  color: #750101;
+}
+
+.background-image {
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+footer {
+  text-align: center;
+}
+
+.nav-bar {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 0;
+}
+
+.nav-bar li {
+  list-style-type: none;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border: 2px solid black;
+  border-radius: 10%;
+  background-color: #c07c66;
+  font-size: 18px;
+}
+
+.nav-bar li a {
+  color: black;
+}
+
+.nav-bar .nav-image {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.nav-bar .nav-image a img {
+  width: 45px;
+  height: auto;
+  margin: 0;
+  position: relative;
+  top: 5px;
+}
+
+body {
+  background-size: cover;
+  font-family: "Satisfy", cursive;
+  max-width: 100em;
+  margin: 8px;
+}
+
+body a {
+  text-decoration: none;
+  color: #750101;
+}
+
+.background-image {
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+footer {
+  text-align: center;
+}
+
+.home {
+  text-align: center;
+}
+
+.home h2 {
+  font-size: 32px;
+}
+
+.home h3 {
+  font-size: 24px;
+}
+
+.about {
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 32px;
+}
+
+.about h3 {
+  font-size: 24px;
+}
+
+body {
+  background-size: cover;
+  font-family: "Satisfy", cursive;
+  max-width: 100em;
+  margin: 8px;
+}
+
+body a {
+  text-decoration: none;
+  color: #750101;
+}
+
+.background-image {
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+footer {
+  text-align: center;
+}
+
+.all-recipes {
+  text-align: center;
+  font-size: 32px;
+}
+
+.no-recipes {
+  text-align: center;
+}
+
+.no-recipes h3 {
+  font-size: 24px;
+}
+
+.no-recipes .create-link {
+  font-size: 24px;
+  display: block;
+  padding-bottom: 20px;
+}
+
+.recipe {
+  overflow: hidden;
+}
+
+.recipe a h3 {
+  text-align: center;
+  font-size: 26px;
+  color: #750101;
+}
+
+.recipe a img {
+  width: 85%;
+  height: 30%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.recipe .under-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 5px;
+  font-size: 18px;
+}
+
+.recipe .under-image form {
+  display: inline;
+  margin: 0;
+}
+
+.recipe .under-image form input {
+  position: relative;
+  top: 25%;
+}
+
+.recipe .under-image input {
+  border: 2px solid black;
+  border-radius: 10%;
+  background-color: #c07c66;
+  font-family: 'Satisfy', cursive;
+  font-size: 18px;
+}
+
+body {
+  background-size: cover;
+  font-family: "Satisfy", cursive;
+  max-width: 100em;
+  margin: 8px;
+}
+
+body a {
+  text-decoration: none;
+  color: #750101;
+}
+
+.background-image {
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+footer {
+  text-align: center;
+}
+
+.details {
+  overflow: visible;
+  width: 85%;
+  position: relative;
+  left: 7%;
+}
+
+.details .name {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.details img {
+  width: 100%;
+  height: 30%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.details .recipe-info h3 {
+  font-size: 26px;
+  margin: 10px;
+}
+
+.details .recipe-info .ingredients {
+  margin: 0;
+}
+
+.details .recipe-info .ingredients li {
+  font-size: 18px;
+}
+
+.details .recipe-info p {
+  font-size: 18px;
+}
+
+.details .recipe-info .instructions {
+  width: 100%;
+}
+
+.details .recipe-info .difficulty {
+  font-size: 24px;
+}
+
+.details .recipe-info .dates {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.details .recipe-info .dates p {
+  padding-right: 20px;
+  margin-top: 0;
+}
+
+.details form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.details form input {
+  border: 2px solid black;
+  border-radius: 10%;
+  background-color: #c07c66;
+  font-family: 'Satisfy', cursive;
+  font-size: 18px;
+}
+/*# sourceMappingURL=styles.css.map */

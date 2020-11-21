@@ -1,0 +1,28 @@
+body {
+    background-size: cover;
+    font-family: $font;
+    //font-family: Arial, Helvetica, sans-serif;
+    max-width: 100em;
+    margin: 8px;
+    a {
+        text-decoration: none;
+        color: $linkColor;;
+    }
+}
+
+.background-image
+{
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+footer {
+    text-align: center;
+}

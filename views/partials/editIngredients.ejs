@@ -1,0 +1,21 @@
+<script>
+    var list = document.getElementById('list');
+
+    function addIngredient() {
+        var entry = document.createElement('li');
+        entry.id = 'ingredient-\<\%= index \%\>';
+        entry.innerHTML = `<input name="Ingredients" class='text-like ingredient' placeholder="New Ingredient" required>\n<input type="button" class='button-like X-button' onclick="deleteIngredient('ingredient-\<\%= index \%\>');changedValue()" value="X">`;
+        list.appendChild(entry);
+    }
+
+    function deleteIngredient(id) {
+        var ingredient = document.getElementById(id);
+        list.removeChild(ingredient);
+    }
+
+    function validateIngredients() {
+        if ($('#list li').length == 0) {
+            document.getElementById('add-ingredient').click();
+        }
+    }
+</script>

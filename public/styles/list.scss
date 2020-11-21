@@ -1,0 +1,73 @@
+@import './base';
+
+// List
+.all-recipes {
+    text-align: center;
+    font-size: 32px;
+}
+
+.no-recipes {
+    text-align: center;
+    h3 {
+        font-size: 24px;
+    }
+
+    .create-link {
+        font-size: 24px;
+        display: block;
+        padding-bottom: 20px;
+    }
+}
+
+$recipeColor: $linkColor;
+
+@mixin button-style {
+    input {
+        border: 2px solid black;
+        border-radius: 10%;
+        background-color: $buttonColor;
+        font-family: 'Satisfy', cursive;
+        font-size: 18px;
+    }
+}
+
+@mixin image-display($width, $height) {
+    width: $width;
+    height: $height;
+    object-fit: cover;
+    object-position: 50% 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.recipe {
+    overflow: hidden;
+    a {
+        h3{
+            text-align: center;
+            font-size: 26px;
+            color: $recipeColor;
+        }
+
+        img {
+            @include image-display(85%, 30%);
+        }
+    }
+
+    .under-image {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 5px;
+        font-size: 18px;
+        form {
+            display: inline;
+            margin: 0;
+            input {
+                position: relative;
+                top: 25%;
+            }
+        }
+        @include button-style();
+    }
+}

@@ -1,0 +1,11 @@
+$linkColor: #750101;
+$buttonColor: rgb(192, 124, 102);
+$navbarColor: rgba(255, 255, 255, 0.5);
+$font: 'Satisfy', cursive;
+
+@import './base';
+@import './creation-editing-styles';
+@import './nav';
+@import './pages';
+@import './list';
+@import './details';

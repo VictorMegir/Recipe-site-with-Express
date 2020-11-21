@@ -1,0 +1,21 @@
+@import './base';
+
+@mixin basic-page {
+    text-align: center;
+    h2 {
+        font-size: 32px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+}
+
+// Home
+.home {
+    @include basic-page();
+}
+
+// About
+.about {
+    @include basic-page();
+}

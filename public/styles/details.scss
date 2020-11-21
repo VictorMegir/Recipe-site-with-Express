@@ -1,0 +1,60 @@
+@import './base';
+
+
+// Details
+.details {
+    overflow: visible;
+    width: 85%;
+    position: relative;
+    left: 7%;
+
+    .name {
+        text-align: center;
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    img {
+        @include image-display(100%, 30%);
+    }
+
+    .recipe-info {
+        h3 {
+            font-size: 26px;
+            margin: 10px;
+        }
+
+        .ingredients {
+            margin: 0;
+            li {
+                font-size: 18px;
+            }
+        }
+        
+        p {
+            font-size: 18px;
+        }
+
+        .instructions {
+            width: 100%;
+        }
+
+        .difficulty {
+            font-size: 24px;
+        }
+
+        .dates {
+            display: flex;
+            p {
+                padding-right: 20px;
+                margin-top: 0;
+            }
+        }
+    }
+    
+    form {
+        display: flex;
+        justify-content: space-evenly;
+        @include button-style();
+    }
+}
