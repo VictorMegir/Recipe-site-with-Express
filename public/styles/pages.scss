@@ -1,5 +1,3 @@
-@import './base';
-
 @mixin basic-page {
     text-align: center;
     h2 {
@@ -10,12 +8,21 @@
     }
 }
 
-// Home
-.home {
+.about {
     @include basic-page();
 }
 
-// About
-.about {
+.page-404 {
     @include basic-page();
+    overflow: visible;
+    img {
+        width: 85%;
+        height: 30%;
+        object-fit: cover;
+        object-position: 50% 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
 }

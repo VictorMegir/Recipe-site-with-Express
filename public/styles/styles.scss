@@ -4,8 +4,8 @@ $navbarColor: rgba(255, 255, 255, 0.5);
 $font: 'Satisfy', cursive;
 
 @import './base';
-@import './creation-editing-styles';
 @import './nav';
 @import './pages';
 @import './list';
 @import './details';
+@import './creation-editing-styles';
